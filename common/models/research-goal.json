@@ -18,9 +18,9 @@
   },
   "validations": [],
   "relations": {
-    "researchProcess": {
+    "research": {
       "type": "belongsTo",
-      "model": "ResearchProcess",
+      "model": "Research",
       "foreignKey": "",
       "options": {
         "nestRemoting": true

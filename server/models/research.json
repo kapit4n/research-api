@@ -1,5 +1,5 @@
 {
-  "name": "ResearchProcess",
+  "name": "Research",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
