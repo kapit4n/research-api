@@ -9,13 +9,13 @@
     "name": {
       "type": "string"
     },
+    "status": {
+      "type": "string"
+    },
     "description": {
       "type": "string"
     },
     "imageUrl": {
-      "type": "string"
-    },
-    "status": {
       "type": "string"
     }
   },

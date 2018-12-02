@@ -10,6 +10,9 @@
       "type": "string",
       "required": true
     },
+    "status": {
+      "type": "string"
+    },
     "startDate": {
       "type": "date"
     },
@@ -20,9 +23,6 @@
       "type": "string"
     },
     "imageUrl": {
-      "type": "string"
-    },
-    "status": {
       "type": "string"
     }
   },
