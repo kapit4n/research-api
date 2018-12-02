@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.19, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.22, for Linux (x86_64)
 --
 -- Host: localhost    Database: research
 -- ------------------------------------------------------
--- Server version	5.7.19-log
+-- Server version	5.7.22-0ubuntu0.16.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,10 +14,17 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
---
--- Table structure for table `accesstoken`
---
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-11-30 21:31:35
 
 DROP TABLE IF EXISTS `accesstoken`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -79,6 +86,7 @@ DROP TABLE IF EXISTS `research`;
 CREATE TABLE `research` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(512) NOT NULL,
+  `status` varchar(512) DEFAULT NULL,
   `startDate` datetime DEFAULT NULL,
   `endDate` datetime DEFAULT NULL,
   `description` varchar(512) DEFAULT NULL,
@@ -93,7 +101,8 @@ CREATE TABLE `research` (
 
 LOCK TABLES `research` WRITE;
 /*!40000 ALTER TABLE `research` DISABLE KEYS */;
-INSERT INTO `research` VALUES (2,'Requirements Project','2018-06-25 16:22:58','2018-09-25 16:22:58','This project is to discover the requirements of the requirements project.','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsrKpPLycp-oOHz7HLj6Uu41Vz3NDADmC1rryuj2KfaMDGaiLp'),(3,'Angular Material','2018-06-25 16:22:58','2018-09-25 16:22:58','This is a project to display the goals that we should reach in a angular material research','http://2.bp.blogspot.com/-9e_dXZnEGu0/Vm-LQcOazUI/AAAAAAAAEtU/rbSXZLBzmtw/s1600/material-big.png');
+INSERT INTO `research` VALUES (2,'Requirements Project','new','2018-06-25 16:22:58','2018-09-25 16:22:58','This project is to discover the requirements of the requirements project.','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsrKpPLycp-oOHz7HLj6Uu41Vz3NDADmC1rryuj2KfaMDGaiLp'),
+(3,'Angular Material','new','2018-06-25 16:22:58','2018-09-25 16:22:58','This is a project to display the goals that we should reach in a angular material research','http://2.bp.blogspot.com/-9e_dXZnEGu0/Vm-LQcOazUI/AAAAAAAAEtU/rbSXZLBzmtw/s1600/material-big.png');
 /*!40000 ALTER TABLE `research` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,6 +116,7 @@ DROP TABLE IF EXISTS `researchgoal`;
 CREATE TABLE `researchgoal` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(512) DEFAULT NULL,
+  `status` varchar(512) DEFAULT NULL,
   `description` varchar(512) DEFAULT NULL,
   `imageUrl` varchar(512) DEFAULT NULL,
   `researchId` int(11) DEFAULT NULL,
@@ -120,7 +130,8 @@ CREATE TABLE `researchgoal` (
 
 LOCK TABLES `researchgoal` WRITE;
 /*!40000 ALTER TABLE `researchgoal` DISABLE KEYS */;
-INSERT INTO `researchgoal` VALUES (1,'Register a project','This is something that I need to do first','http://cdn2.itpro.co.uk/sites/itpro/files/styles/article_main_wide_image/public/2017/04/project_management_0.jpg?itok=8Uny5SVW',2);
+INSERT INTO `researchgoal` VALUES 
+(1,'Register a project','new','This is something that I need to do first','http://cdn2.itpro.co.uk/sites/itpro/files/styles/article_main_wide_image/public/2017/04/project_management_0.jpg?itok=8Uny5SVW',2);
 /*!40000 ALTER TABLE `researchgoal` ENABLE KEYS */;
 UNLOCK TABLES;
 

@@ -10,6 +10,9 @@
       "type": "string",
       "required": true
     },
+    "status": {
+      "type": "string"
+    },
     "startDate": {
       "type": "date"
     },
@@ -24,7 +27,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "researchGoals": {
+      "type": "hasMany",
+      "model": "ResearchGoal",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }
