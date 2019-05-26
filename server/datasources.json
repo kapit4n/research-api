@@ -1,15 +1,11 @@
 {
   "db": {
+    "host": "127.0.0.1",
+    "url": "",
+    "database": "researchapi",
+    "password": "password",
     "name": "db",
-    "connector": "memory"
-  },
-  "mysql": {
-    "host": "localhost",
-    "port": 3306,
-    "database": "research",
-    "password": "root",
-    "name": "mysql",
-    "connector": "mysql",
-    "user": "root"
+    "user": "researchapi",
+    "connector": "mongodb"
   }
 }
